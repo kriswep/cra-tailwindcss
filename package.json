@@ -1,0 +1,21 @@
+{
+  "name": "cra-tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start":
+      "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts start",
+    "build":
+      "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.1.6"
+  }
+}
