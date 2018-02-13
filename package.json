@@ -8,10 +8,10 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start":
-      "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts start",
-    "build":
-      "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts build",
+    "prestart": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css",
+    "start": "react-scripts start",
+    "prebuild": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
