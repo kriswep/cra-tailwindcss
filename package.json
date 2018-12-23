@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.4"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "prestart": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css",
@@ -16,6 +16,12 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "tailwindcss": "^0.4.1"
-  }
+    "tailwindcss": "^0.7.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

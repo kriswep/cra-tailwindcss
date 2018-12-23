@@ -6,20 +6,18 @@
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
 
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
   line-height: 1.15; /* 1 */
-      -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -27,7 +25,7 @@ html {
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin in all browsers.
  */
 
 body {
@@ -35,15 +33,10 @@ body {
 }
 
 /**
- * Add the correct display in IE 9-.
+ * Render the `main` element consistently in IE.
  */
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
+main {
   display: block;
 }
 
@@ -59,26 +52,6 @@ h1 {
 
 /* Grouping content
    ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-figcaption,
-figure,
-main {
-  /* 1 */
-  display: block;
-}
-
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -105,33 +78,23 @@ pre {
    ========================================================================== */
 
 /**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * Remove the gray background on active links in IE 10.
  */
 
 a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
+  background-color: transparent;
 }
 
 /**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-  font-weight: inherit;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -153,23 +116,6 @@ kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-  background-color: #ff0;
-  color: #000;
 }
 
 /**
@@ -205,44 +151,18 @@ sup {
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-audio,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Remove the border on images inside links in IE 10-.
+ * Remove the border on images inside links in IE 10.
  */
 
 img {
   border-style: none;
 }
 
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change the font styles in all browsers (opinionated).
+ * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
 
@@ -251,7 +171,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -280,17 +200,14 @@ select {
 }
 
 /**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+ * Correct the inability to style clickable types in iOS and Safari.
  */
 
 button,
-html [type="button"],
-/* 1 */
+[type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: button;
 }
 
 /**
@@ -341,17 +258,15 @@ legend {
 }
 
 /**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
 progress {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  vertical-align: baseline;
 }
 
 /**
- * Remove the default vertical scrollbar in IE.
+ * Remove the default vertical scrollbar in IE 10+.
  */
 
 textarea {
@@ -359,8 +274,8 @@ textarea {
 }
 
 /**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
  */
 
 [type="checkbox"],
@@ -389,10 +304,9 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -411,13 +325,10 @@ textarea {
    ========================================================================== */
 
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
-details,
-/* 1 */
-menu {
+details {
   display: block;
 }
 
@@ -429,30 +340,19 @@ summary {
   display: list-item;
 }
 
-/* Scripting
+/* Misc
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-canvas {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in IE.
+ * Add the correct display in IE 10+.
  */
 
 template {
   display: none;
 }
 
-/* Hidden
-   ========================================================================== */
-
 /**
- * Add the correct display in IE 10-.
+ * Add the correct display in IE 10.
  */
 
 [hidden] {
@@ -527,17 +427,23 @@ ul {
 }
 
 /**
- * Suppress the focus outline on elements that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
+ * Tailwind custom reset styles
  */
 
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
 /**
- * Tailwind custom reset styles
+ * Allow adding a border to an element by just adding a border-width.
+ *
+ * By default, the way the browser specifies that an element should have no
+ * border is by setting it's border-style to `none` in the user-agent
+ * stylesheet.
+ *
+ * In order to easily add borders to elements by just setting the `border-width`
+ * property, we change the default border-style for all elements to `solid`, and
+ * use border-width to hide them instead. This way our `border` utilities only
+ * need to set the `border-width` property instead of the entire `border`
+ * shorthand, making our border utilities much more straightforward to compose.
+ *
+ * https://github.com/tailwindcss/tailwindcss/pull/116
  */
 
 *,
@@ -549,16 +455,17 @@ ul {
 }
 
 /**
- * Temporary reset for a change introduced in Chrome 62 but now reverted.
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
  *
- * We can remove this when the reversion is in a normal Chrome release.
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
  */
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  border-radius: 0;
+img {
+  border-style: solid;
 }
 
 textarea {
@@ -567,14 +474,19 @@ textarea {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
 }
 
 input::placeholder,
@@ -584,8 +496,12 @@ textarea::placeholder {
 }
 
 button,
-[role=button] {
+[role="button"] {
   cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 /**
@@ -609,41 +525,15 @@ button,
   * config file.
   */
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 576px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
 .list-reset {
   list-style: none;
   padding: 0;
 }
 
 .appearance-none {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .bg-fixed {
@@ -1294,12 +1184,24 @@ button,
   background-repeat: repeat-y;
 }
 
+.bg-auto {
+  background-size: auto;
+}
+
 .bg-cover {
   background-size: cover;
 }
 
 .bg-contain {
   background-size: contain;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.border-separate {
+  border-collapse: separate;
 }
 
 .border-transparent {
@@ -2214,6 +2116,14 @@ button,
   cursor: pointer;
 }
 
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -2247,27 +2157,37 @@ button,
 }
 
 .flex {
+  display: -webkit-box;
   display: flex;
 }
 
 .inline-flex {
+  display: -webkit-inline-box;
   display: inline-flex;
 }
 
 .flex-row {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 
 .flex-row-reverse {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
 }
 
 .flex-col {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .flex-col-reverse {
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+          flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -2283,23 +2203,28 @@ button,
 }
 
 .items-start {
-  align-items: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
 }
 
 .items-end {
-  align-items: flex-end;
+  -webkit-box-align: end;
+          align-items: flex-end;
 }
 
 .items-center {
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .items-baseline {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+          align-items: baseline;
 }
 
 .items-stretch {
-  align-items: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
 }
 
 .self-auto {
@@ -2323,19 +2248,23 @@ button,
 }
 
 .justify-start {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
 }
 
 .justify-end {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 
 .justify-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .justify-around {
@@ -2363,23 +2292,28 @@ button,
 }
 
 .flex-1 {
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1 1 0%;
 }
 
 .flex-auto {
-  flex: auto;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
 }
 
 .flex-initial {
-  flex: initial;
+  -webkit-box-flex: 0;
+          flex: 0 1 auto;
 }
 
 .flex-none {
-  flex: none;
+  -webkit-box-flex: 0;
+          flex: none;
 }
 
 .flex-grow {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 
 .flex-shrink {
@@ -2387,7 +2321,8 @@ button,
 }
 
 .flex-no-grow {
-  flex-grow: 0;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
 }
 
 .flex-no-shrink {
@@ -3178,6 +3113,14 @@ button,
   opacity: 1;
 }
 
+.outline-none {
+  outline: 0;
+}
+
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -3194,14 +3137,36 @@ button,
   overflow: scroll;
 }
 
-.overflow-x-scroll {
+.overflow-x-auto {
   overflow-x: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .overflow-y-scroll {
-  overflow-y: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
 }
 
 .scrolling-touch {
@@ -3476,6 +3441,11 @@ button,
   position: relative;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .pin-none {
   top: auto;
   right: auto;
@@ -3558,6 +3528,14 @@ button,
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .text-left {
@@ -4301,11 +4279,17 @@ button,
 }
 
 .select-none {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .select-text {
-  user-select: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 .align-baseline {
@@ -4536,7 +4520,9 @@ button,
   }
 
   .sm\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .sm\:bg-fixed {
@@ -5185,6 +5171,10 @@ button,
 
   .sm\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .sm\:bg-auto {
+    background-size: auto;
   }
 
   .sm\:bg-cover {
@@ -6107,6 +6097,14 @@ button,
     cursor: pointer;
   }
 
+  .sm\:cursor-wait {
+    cursor: wait;
+  }
+
+  .sm\:cursor-move {
+    cursor: move;
+  }
+
   .sm\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -6140,27 +6138,37 @@ button,
   }
 
   .sm\:flex {
+    display: -webkit-box;
     display: flex;
   }
 
   .sm\:inline-flex {
+    display: -webkit-inline-box;
     display: inline-flex;
   }
 
   .sm\:flex-row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
   }
 
   .sm\:flex-row-reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
   }
 
   .sm\:flex-col {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .sm\:flex-col-reverse {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .sm\:flex-wrap {
@@ -6176,23 +6184,28 @@ button,
   }
 
   .sm\:items-start {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .sm\:items-end {
-    align-items: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
   }
 
   .sm\:items-center {
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .sm\:items-baseline {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
   }
 
   .sm\:items-stretch {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
 
   .sm\:self-auto {
@@ -6216,19 +6229,23 @@ button,
   }
 
   .sm\:justify-start {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
   }
 
   .sm\:justify-end {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
   }
 
   .sm\:justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .sm\:justify-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .sm\:justify-around {
@@ -6256,23 +6273,28 @@ button,
   }
 
   .sm\:flex-1 {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1 1 0%;
   }
 
   .sm\:flex-auto {
-    flex: auto;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
   }
 
   .sm\:flex-initial {
-    flex: initial;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
   }
 
   .sm\:flex-none {
-    flex: none;
+    -webkit-box-flex: 0;
+            flex: none;
   }
 
   .sm\:flex-grow {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
 
   .sm\:flex-shrink {
@@ -6280,7 +6302,8 @@ button,
   }
 
   .sm\:flex-no-grow {
-    flex-grow: 0;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
   }
 
   .sm\:flex-no-shrink {
@@ -7087,14 +7110,36 @@ button,
     overflow: scroll;
   }
 
-  .sm\:overflow-x-scroll {
+  .sm\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .sm\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .sm\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .sm\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .sm\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .sm\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .sm\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .sm\:scrolling-touch {
@@ -7369,6 +7414,11 @@ button,
     position: relative;
   }
 
+  .sm\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
   .sm\:pin-none {
     top: auto;
     right: auto;
@@ -7443,6 +7493,14 @@ button,
 
   .sm\:shadow-none {
     box-shadow: none;
+  }
+
+  .sm\:table-auto {
+    table-layout: auto;
+  }
+
+  .sm\:table-fixed {
+    table-layout: fixed;
   }
 
   .sm\:text-left {
@@ -8186,11 +8244,17 @@ button,
   }
 
   .sm\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .sm\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .sm\:align-baseline {
@@ -8407,7 +8471,9 @@ button,
   }
 
   .md\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .md\:bg-fixed {
@@ -9056,6 +9122,10 @@ button,
 
   .md\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .md\:bg-auto {
+    background-size: auto;
   }
 
   .md\:bg-cover {
@@ -9978,6 +10048,14 @@ button,
     cursor: pointer;
   }
 
+  .md\:cursor-wait {
+    cursor: wait;
+  }
+
+  .md\:cursor-move {
+    cursor: move;
+  }
+
   .md\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -10011,27 +10089,37 @@ button,
   }
 
   .md\:flex {
+    display: -webkit-box;
     display: flex;
   }
 
   .md\:inline-flex {
+    display: -webkit-inline-box;
     display: inline-flex;
   }
 
   .md\:flex-row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
   }
 
   .md\:flex-row-reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
   }
 
   .md\:flex-col {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .md\:flex-col-reverse {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .md\:flex-wrap {
@@ -10047,23 +10135,28 @@ button,
   }
 
   .md\:items-start {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .md\:items-end {
-    align-items: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
   }
 
   .md\:items-center {
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .md\:items-baseline {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
   }
 
   .md\:items-stretch {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
 
   .md\:self-auto {
@@ -10087,19 +10180,23 @@ button,
   }
 
   .md\:justify-start {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
   }
 
   .md\:justify-end {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
   }
 
   .md\:justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .md\:justify-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .md\:justify-around {
@@ -10127,23 +10224,28 @@ button,
   }
 
   .md\:flex-1 {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1 1 0%;
   }
 
   .md\:flex-auto {
-    flex: auto;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
   }
 
   .md\:flex-initial {
-    flex: initial;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
   }
 
   .md\:flex-none {
-    flex: none;
+    -webkit-box-flex: 0;
+            flex: none;
   }
 
   .md\:flex-grow {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
 
   .md\:flex-shrink {
@@ -10151,7 +10253,8 @@ button,
   }
 
   .md\:flex-no-grow {
-    flex-grow: 0;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
   }
 
   .md\:flex-no-shrink {
@@ -10958,14 +11061,36 @@ button,
     overflow: scroll;
   }
 
-  .md\:overflow-x-scroll {
+  .md\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .md\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .md\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .md\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .md\:scrolling-touch {
@@ -11240,6 +11365,11 @@ button,
     position: relative;
   }
 
+  .md\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
   .md\:pin-none {
     top: auto;
     right: auto;
@@ -11314,6 +11444,14 @@ button,
 
   .md\:shadow-none {
     box-shadow: none;
+  }
+
+  .md\:table-auto {
+    table-layout: auto;
+  }
+
+  .md\:table-fixed {
+    table-layout: fixed;
   }
 
   .md\:text-left {
@@ -12057,11 +12195,17 @@ button,
   }
 
   .md\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .md\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .md\:align-baseline {
@@ -12278,7 +12422,9 @@ button,
   }
 
   .lg\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .lg\:bg-fixed {
@@ -12927,6 +13073,10 @@ button,
 
   .lg\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .lg\:bg-auto {
+    background-size: auto;
   }
 
   .lg\:bg-cover {
@@ -13849,6 +13999,14 @@ button,
     cursor: pointer;
   }
 
+  .lg\:cursor-wait {
+    cursor: wait;
+  }
+
+  .lg\:cursor-move {
+    cursor: move;
+  }
+
   .lg\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -13882,27 +14040,37 @@ button,
   }
 
   .lg\:flex {
+    display: -webkit-box;
     display: flex;
   }
 
   .lg\:inline-flex {
+    display: -webkit-inline-box;
     display: inline-flex;
   }
 
   .lg\:flex-row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
   }
 
   .lg\:flex-row-reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
   }
 
   .lg\:flex-col {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .lg\:flex-col-reverse {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .lg\:flex-wrap {
@@ -13918,23 +14086,28 @@ button,
   }
 
   .lg\:items-start {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .lg\:items-end {
-    align-items: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
   }
 
   .lg\:items-center {
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .lg\:items-baseline {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
   }
 
   .lg\:items-stretch {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
 
   .lg\:self-auto {
@@ -13958,19 +14131,23 @@ button,
   }
 
   .lg\:justify-start {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
   }
 
   .lg\:justify-end {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
   }
 
   .lg\:justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .lg\:justify-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .lg\:justify-around {
@@ -13998,23 +14175,28 @@ button,
   }
 
   .lg\:flex-1 {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1 1 0%;
   }
 
   .lg\:flex-auto {
-    flex: auto;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
   }
 
   .lg\:flex-initial {
-    flex: initial;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
   }
 
   .lg\:flex-none {
-    flex: none;
+    -webkit-box-flex: 0;
+            flex: none;
   }
 
   .lg\:flex-grow {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
 
   .lg\:flex-shrink {
@@ -14022,7 +14204,8 @@ button,
   }
 
   .lg\:flex-no-grow {
-    flex-grow: 0;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
   }
 
   .lg\:flex-no-shrink {
@@ -14829,14 +15012,36 @@ button,
     overflow: scroll;
   }
 
-  .lg\:overflow-x-scroll {
+  .lg\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .lg\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .lg\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .lg\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .lg\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .lg\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .lg\:scrolling-touch {
@@ -15111,6 +15316,11 @@ button,
     position: relative;
   }
 
+  .lg\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
   .lg\:pin-none {
     top: auto;
     right: auto;
@@ -15185,6 +15395,14 @@ button,
 
   .lg\:shadow-none {
     box-shadow: none;
+  }
+
+  .lg\:table-auto {
+    table-layout: auto;
+  }
+
+  .lg\:table-fixed {
+    table-layout: fixed;
   }
 
   .lg\:text-left {
@@ -15928,11 +16146,17 @@ button,
   }
 
   .lg\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .lg\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .lg\:align-baseline {
@@ -16149,7 +16373,9 @@ button,
   }
 
   .xl\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .xl\:bg-fixed {
@@ -16798,6 +17024,10 @@ button,
 
   .xl\:bg-repeat-y {
     background-repeat: repeat-y;
+  }
+
+  .xl\:bg-auto {
+    background-size: auto;
   }
 
   .xl\:bg-cover {
@@ -17720,6 +17950,14 @@ button,
     cursor: pointer;
   }
 
+  .xl\:cursor-wait {
+    cursor: wait;
+  }
+
+  .xl\:cursor-move {
+    cursor: move;
+  }
+
   .xl\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -17753,27 +17991,37 @@ button,
   }
 
   .xl\:flex {
+    display: -webkit-box;
     display: flex;
   }
 
   .xl\:inline-flex {
+    display: -webkit-inline-box;
     display: inline-flex;
   }
 
   .xl\:flex-row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
   }
 
   .xl\:flex-row-reverse {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
   }
 
   .xl\:flex-col {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
 
   .xl\:flex-col-reverse {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
 
   .xl\:flex-wrap {
@@ -17789,23 +18037,28 @@ button,
   }
 
   .xl\:items-start {
-    align-items: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
 
   .xl\:items-end {
-    align-items: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
   }
 
   .xl\:items-center {
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .xl\:items-baseline {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
   }
 
   .xl\:items-stretch {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
 
   .xl\:self-auto {
@@ -17829,19 +18082,23 @@ button,
   }
 
   .xl\:justify-start {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
   }
 
   .xl\:justify-end {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
   }
 
   .xl\:justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .xl\:justify-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .xl\:justify-around {
@@ -17869,23 +18126,28 @@ button,
   }
 
   .xl\:flex-1 {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1 1 0%;
   }
 
   .xl\:flex-auto {
-    flex: auto;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
   }
 
   .xl\:flex-initial {
-    flex: initial;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
   }
 
   .xl\:flex-none {
-    flex: none;
+    -webkit-box-flex: 0;
+            flex: none;
   }
 
   .xl\:flex-grow {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
   }
 
   .xl\:flex-shrink {
@@ -17893,7 +18155,8 @@ button,
   }
 
   .xl\:flex-no-grow {
-    flex-grow: 0;
+    -webkit-box-flex: 0;
+            flex-grow: 0;
   }
 
   .xl\:flex-no-shrink {
@@ -18700,14 +18963,36 @@ button,
     overflow: scroll;
   }
 
-  .xl\:overflow-x-scroll {
+  .xl\:overflow-x-auto {
     overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .xl\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .xl\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .xl\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
+  .xl\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 
   .xl\:overflow-y-scroll {
-    overflow-y: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
   }
 
   .xl\:scrolling-touch {
@@ -18982,6 +19267,11 @@ button,
     position: relative;
   }
 
+  .xl\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
   .xl\:pin-none {
     top: auto;
     right: auto;
@@ -19056,6 +19346,14 @@ button,
 
   .xl\:shadow-none {
     box-shadow: none;
+  }
+
+  .xl\:table-auto {
+    table-layout: auto;
+  }
+
+  .xl\:table-fixed {
+    table-layout: fixed;
   }
 
   .xl\:text-left {
@@ -19799,11 +20097,17 @@ button,
   }
 
   .xl\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .xl\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .xl\:align-baseline {
