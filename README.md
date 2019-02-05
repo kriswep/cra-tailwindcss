@@ -1,8 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-**It shows how you could setup [Tailwind CSS](https://tailwindcss.com/), a new utility-first css framework, in an CRA environment. You can read more over on my [blog](https://wetainment.com/create-react-app-tailwind-css/).**
+It shows how you could setup [Tailwind CSS](https://tailwindcss.com/), a new utility-first css framework, in an CRA environment. You can read more over on my [blog](https://wetainment.com/create-react-app-tailwind-css/).
 
 *Updated to `Create React App 2.1`, `React 16.7` and `Tailwind CSS 0.7` in December '18*
+
+**Also check out my newer setup of [Tailwind CSS in React with styled-components](https://wetainment.com/articles/tailwind-css-in-js/) and its' [repo](https://github.com/kriswep/cra-tailwindcss-in-js)**
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
