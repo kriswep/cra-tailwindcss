@@ -11,12 +11,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div
-          className="bg-teal-lightest border-t-4 border-teal rounded rounded-b text-teal-darkest px-4 py-3 shadow-md"
+          className="bg-teal-100 border-t-4 border-regal-blue rounded rounded-b text-teal-900 px-4 py-3 shadow-md"
           role="alert"
         >
           <div className="flex justify-center">
             <svg
-              className="h-8 w-6 text-teal mr-4"
+              className="h-8 w-6 text-teal-500 mr-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -25,7 +25,7 @@ class App extends Component {
             <div>
               <p className="font-bold">
                 With{' '}
-                <a href="https://tailwindcss.com/" className="text-grey-darker">
+                <a href="https://tailwindcss.com/" className="text-gray-800">
                   Tailwind CSS
                 </a>
               </p>
