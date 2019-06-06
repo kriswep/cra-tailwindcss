@@ -6,9 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header flex justify-center">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
         </header>
         <div
           className="bg-teal-100 border-t-4 border-regal-blue rounded rounded-b text-teal-900 px-4 py-3 shadow-md"
@@ -24,7 +23,7 @@ class App extends Component {
             </svg>
             <div>
               <p className="font-bold">
-                With{' '}
+                Welcome to React with{' '}
                 <a href="https://tailwindcss.com/" className="text-gray-800">
                   Tailwind CSS
                 </a>
