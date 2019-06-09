@@ -11,6 +11,7 @@
     "cypress": "^3.3.1",
     "cypress-image-snapshot": "^3.1.1",
     "eslint-plugin-cypress": "^2.2.1",
+    "start-server-and-test": "^1.9.1",
     "tailwindcss": "^1.0.3"
   },
   "scripts": {
@@ -20,6 +21,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "cypress open",
+    "test:ci": "start-server-and-test start http://localhost:3000 cy:run",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:updateSnapshots": "cypress run --env updateSnapshots=true"
