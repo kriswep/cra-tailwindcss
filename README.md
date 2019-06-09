@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+[![CircleCI](https://circleci.com/gh/kriswep/cra-tailwindcss.svg?style=svg)](https://circleci.com/gh/kriswep/cra-tailwindcss)
+
 It shows how you could setup [Tailwind CSS](https://tailwindcss.com/), a new utility-first css framework, in an CRA environment. You can read more over on my [blog](https://wetainment.com/create-react-app-tailwind-css/).
 
 *Updated to `Create React App 3`, `React 16.8` and `Tailwind CSS 1` in June '19*
