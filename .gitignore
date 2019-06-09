@@ -8,6 +8,9 @@
 
 # production
 /build
+/cypress/screenshots
+/cypress/videos
+__diff_output__
 
 # misc
 .DS_Store

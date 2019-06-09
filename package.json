@@ -8,6 +8,9 @@
     "react-scripts": "^3.0.1"
   },
   "devDependencies": {
+    "cypress": "^3.3.1",
+    "cypress-image-snapshot": "^3.1.1",
+    "eslint-plugin-cypress": "^2.2.1",
     "tailwindcss": "^1.0.3"
   },
   "scripts": {
@@ -15,8 +18,11 @@
     "start": "react-scripts start",
     "prebuild": "tailwind build ./src/index.tailwind.css -c ./tailwind.config.js -o ./src/index.css",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:updateSnapshots": "cypress run --env updateSnapshots=true"
   },
   "browserslist": [
     ">0.2%",
