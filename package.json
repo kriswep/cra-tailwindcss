@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "16.10.1",
     "react-dom": "16.10.1",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.2.0"
   },
   "devDependencies": {
     "cypress": "3.4.1",
