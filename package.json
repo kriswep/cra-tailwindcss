@@ -11,7 +11,7 @@
     "cypress": "4.1.0",
     "cypress-image-snapshot": "3.1.1",
     "eslint-plugin-cypress": "2.10.3",
-    "start-server-and-test": "1.10.9",
+    "start-server-and-test": "1.10.11",
     "tailwindcss": "1.2.0"
   },
   "scripts": {
