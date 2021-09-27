@@ -8,7 +8,7 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
-    "cypress": "8.4.1",
+    "cypress": "8.5.0",
     "cypress-image-snapshot": "4.0.1",
     "eslint-plugin-cypress": "2.12.1",
     "start-server-and-test": "1.14.0",
